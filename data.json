@@ -1,0 +1,26 @@
+{
+  "placeholderImg": "/assets/placeholder.png",
+  "responseBackgroundImage": "/assets/scorchedearth.jpg",
+  "logoPath": "/assets/logo.png",
+  "pageTitle": "Homepage",
+  "mainText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sapien leo, aliquet porttitor arcu ut, faucibus suscipit dolor. Ut tincidunt mattis commodo. Fusce fringilla interdum iaculis. Proin vitae feugiat odio. Nunc placerat.",
+  "headerTitle": "Lorem",
+  "formHeading": "Leave a response",
+  "responseFieldLabel": "Leave a response here",
+  "buttonText": "Send Response",
+  "fullNameLabel": "Full Name",
+  "resArr": [
+    {
+      "name": "Bing Bat",
+      "response": "foo"
+    },
+    {
+      "name": "Kleese",
+      "response": "King"
+    },
+    {
+      "name": "Becky",
+      "response": "Banks"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <header class="header">
+        <nav class="header__navigation">
+            <img src='{{ logoPath }}' class="header__logo"/>
+            <h1 class="header__title">
+                {{ headerTitle }}
+            </h1>
+        </nav>
+    </header>
+    <section class="upper">
+        <div class="row">
+            <div class="col-1-of-2">
+                <p class="text">
+                    {{ mainText }}
+                </p>
+            </div>
+            <div class="col-1-of-2">
+                <img src="{{placeholderImg}}"/>
+            </div>
+        </div>
+    </section>
+    <section class="lower">
+        <div class="row response" style="background-image: linear-gradient(
+				105deg,
+				rgba($color-white, 0.2) 0%,
+				rgba($color-white, 0.9) 50%,
+				transparent 50%
+			),
+			url('{{responseBackgroundImage}}');">
+            <div class="col-1-of-2 response__block response__block--form">
+                <form action="/" class="form" method="POST">
+                    <h2 class="form__heading">{{ formHeading }}</h2>
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Full Name" name="name" id="name" required>
+                        <label for="name" class="form__label">{{ fullNameLabel }}</label>
+                    </div>
+                    <div class="form__group">
+                        <textarea type="text" class="form__input form__textarea" name="responseField" placeholder="Response" id="responseField" required rows="10" cols="50"></textarea>
+                        <label for="responseField" class="form__label">{{ responseFieldLabel }}</label>
+                    </div>
+
+                    <button type="submit" class="form__btn btn--red" id="submitButton">{{ buttonText }}</button>
+                </form>
+            </div>
+            <div class="col-1-of-2 response__block response__block--list">
+                <ul class="response__list">
+                    {% for item in resArr %}
+                        <li class="response__item">
+                            <span class="response__name">{{ item.name }}</span>
+                            {{ item.response }}
+                        </li>
+                    {% else %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
